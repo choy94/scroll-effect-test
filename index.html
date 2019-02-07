@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)https://s.codepen.io/ReGGae/fullpage/bmyYEj -->
 <html lang="ko">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   
-  <!--<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">-->
-  <!--<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">-->
   <title>동적구현 테스트</title>
 
   <link rel="stylesheet" href="./normalize.min.css">
@@ -327,10 +324,8 @@ ul, li {
     </div>
     
     <div class="slider__text js-slider__text">
-      <div class="slider__text-line js-slider__text-line"><div><!--Black is-->전체는</div></div>
-      <div class="slider__text-line js-slider__text-line"><div><!--timeless. Black is-->단순히</div></div>
-      <div class="slider__text-line js-slider__text-line"><div><!--the colour of-->부분의 합이</div></div>
-      <div class="slider__text-line js-slider__text-line"><div><!--Eternity.-->아니다.</div></div>
+      <div class="slider__text-line js-slider__text-line"><div>전체는 단순히</div></div>
+      <div class="slider__text-line js-slider__text-line"><div>부분의 합이 아니다.</div></div>
     </div>
     
   </div>
@@ -382,10 +377,9 @@ ul, li {
     X Kyoto Black
   </span>
 </div>
-    <script src="./stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
 
   <script src="./TweenMax.min.js"></script>
-<script src="./three.min.js"></script>
+  <script src="./three.min.js"></script>
 
   
 
@@ -398,33 +392,7 @@ ul, li {
 
 
 
-
-
-
-
     this.frag = '\n    varying vec2 vUv;\n\n    uniform sampler2D texture1;\n    uniform sampler2D texture2;\n    uniform sampler2D disp;\n\n    uniform float dispPower;\n    uniform float intensity;\n    \n    void main() {\n      vec2 uv = vUv;\n      \n      vec4 disp = texture2D(disp, uv);\n      vec2 dispVec = vec2(disp.x, disp.y);\n      \n      vec2 distPos1 = uv + (dispVec * intensity * dispPower);\n      vec2 distPos2 = uv + (dispVec * -(intensity * (1.0 - dispPower)));\n      \n      vec4 _texture1 = texture2D(texture1, distPos1);\n      vec4 _texture2 = texture2D(texture2, distPos2);\n      \n      gl_FragColor = mix(_texture1, _texture2, dispPower);\n    }\n    ';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -729,17 +697,8 @@ links.forEach(function (link) {
 
 // Init classes
 var slider = new Slider();
-      //# sourceURL=pen.js
+
     </script>
 
-
-
-  
-  
-
-  <script src="./css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
-
-
-
- 
-</body></html>
+</body>
+</html>
